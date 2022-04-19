@@ -4,8 +4,10 @@ for (let i = 0; i <256; i++) {
     main_div.innerHTML += "<div class=dividio> </div>";
 }
 
-/*let collection = document.getElementsByClassName("dividio");*/
+let div_s = document.querySelectorAll(".dividio");
 
-main_div.addEventListener('mouseover', function(event) {
-        event.target.style.backgroundColor = "black";
+div_s.forEach(div => {
+    div.addEventListener('mouseover', function(event) {
+        div.setAttribute('style', "background-color: black;");
+    })
 });

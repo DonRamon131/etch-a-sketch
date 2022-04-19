@@ -1,9 +1,13 @@
 #mainDiv {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(16, auto);
+    grid-template-rows: repeat(16, 61px);
+    background-color: rgb(251, 203, 145);
+    padding: 5px;
 }
 
 #mainDiv div {
-    color: lightcoral;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgb(247, 205, 153);
+    padding: 10px;
 }

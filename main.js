@@ -8,6 +8,15 @@ let div_s = document.querySelectorAll(".dividio");
 
 div_s.forEach(div => {
     div.addEventListener('mouseover', function(event) {
-        div.setAttribute('style', "background-color: black;");
+        div.setAttribute('style', "background-color: black;"); /*or event.target.style.backgroundColor = "black";*/
     })
+});
+
+let butto_n = document.getElementById('boton');
+
+butto_n.addEventListener('click', e => {
+    let number = prompt("Enter the number of squares for the new grid.");
+    if (number == null || number <= 0) {
+        let number = prompt("Enter the number of squares for the new grid.");
+    }
 });

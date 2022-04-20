@@ -14,3 +14,9 @@
     border: 1px solid rgb(247, 205, 153);
     padding: 10px;
 }
+
+#boton {
+    background-color: rgb(247, 205, 153);
+    border: none;
+    border-radius: 4px;
+}

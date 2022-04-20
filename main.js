@@ -15,8 +15,12 @@ div_s.forEach(div => {
 let butto_n = document.getElementById('boton');
 
 butto_n.addEventListener('click', e => {
+    div_s.forEach(div => {
+        div.setAttribute('style', "background-color: rgba(255, 255, 255, 0.8);")
+    })
     let number = prompt("Enter the number of squares for the new grid.");
-    if (number == null || number <= 0) {
+    
+    /*if (number == null || number <= 0) {
         let number = prompt("Enter the number of squares for the new grid.");
-    }
+    }*/
 });

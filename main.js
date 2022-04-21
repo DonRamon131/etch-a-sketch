@@ -18,9 +18,17 @@ butto_n.addEventListener('click', e => {
     div_s.forEach(div => {
         div.setAttribute('style', "background-color: rgba(255, 255, 255, 0.8);")
     })
-    let number = prompt("Enter the number of squares for the new grid.");
-    
-    /*if (number == null || number <= 0) {
-        let number = prompt("Enter the number of squares for the new grid.");
-    }*/
+});
+
+let button_n2 = document.getElementById("boton2");
+
+button_n2.addEventListener('click', e => {
+    let number = prompt("Enter the number you wish for the new grid.")
+
+    for (let i = 0; i <number; i++) {
+        main_div.innerHTML += "<div class=dividio> </div>";
+    }
+
+    main_div.setAttribute('style', `grid-template-columns: repeat(${number}, auto);`)
+    main_div.setAttribute('style', `grid-template-rows: repeat(${number}, auto);`)
 });

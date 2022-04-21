@@ -1,8 +1,8 @@
 #mainDiv {
     margin-top: 10px;
     display: grid;
-    grid-template-columns: repeat(16, auto);
-    grid-template-rows: repeat(16, auto);
+    grid-template-columns: repeat(16, 40px);
+    grid-template-rows: repeat(16, 30px);
     background-color: rgb(251, 203, 145);
     padding: 5px;
     width: 640px;
@@ -16,6 +16,12 @@
 }
 
 #boton {
+    background-color: rgb(247, 205, 153);
+    border: none;
+    border-radius: 4px;
+}
+
+#boton2 {
     background-color: rgb(247, 205, 153);
     border: none;
     border-radius: 4px;

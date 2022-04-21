@@ -3,7 +3,6 @@ for (let i = 0; i <256; i++) {
     main_div.innerHTML += "<div class=dividio> </div>";
 }
 
-let div_s = document.querySelectorAll(".dividio");
 let butto_n = document.getElementById('boton');
 butto_n.addEventListener('click', e => {
     div_s.forEach(div => {
@@ -14,14 +13,18 @@ butto_n.addEventListener('click', e => {
 let button_n2 = document.getElementById("boton2");
 button_n2.addEventListener('click', e => {
     let number = prompt("Enter the number you wish for the new grid.")
+    if (number === null) {return;}
     let numberDoubled = number * number;
     main_div.innerHTML="";
     for (let i = 0; i <numberDoubled; i++) {
         main_div.innerHTML += "<div class=dividio> </div>";
     }
-    main_div.setAttribute('style', `grid-template-columns: repeat(${number}, 1fr);`)
-    main_div.setAttribute('style', `grid-template-rows: repeat(${number}, 1fr);`)
+    main_div.setAttribute('style', `grid-template-rows: repeat(${number}, 1fr);`);
+    main_div.setAttribute('style', `grid-template-columns: repeat(${number}, 1fr);`);
+    main_div.style.gridTemplateRows = `repeat(${number}, 1fr)`;
 });
+
+let div_s = document.querySelectorAll(".dividio");
 
 div_s.forEach(div => {
     div.addEventListener('mouseover', e => {

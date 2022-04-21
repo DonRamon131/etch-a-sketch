@@ -13,7 +13,7 @@ butto_n.addEventListener('click', e => {
 let button_n2 = document.getElementById("boton2");
 button_n2.addEventListener('click', e => {
     let number = prompt("Enter the number you wish for the new grid.")
-    if (number === null) {return;}
+    if (number === null || number == "") {return;}
     let numberDoubled = number * number;
     main_div.innerHTML="";
     for (let i = 0; i <numberDoubled; i++) {

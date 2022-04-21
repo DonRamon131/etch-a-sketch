@@ -19,9 +19,9 @@ button_n2.addEventListener('click', e => {
     for (let i = 0; i <numberDoubled; i++) {
         main_div.innerHTML += "<div class=dividio> </div>";
     }
-    main_div.setAttribute('style', `grid-template-rows: repeat(${number}, 1fr);`);
-    main_div.setAttribute('style', `grid-template-columns: repeat(${number}, 1fr);`);
-    main_div.style.gridTemplateRows = `repeat(${number}, 1fr)`;
+    main_div.setAttribute('style', `grid-template-rows: repeat(${number}, 1fr); grid-template-columns: repeat(${number}, 1fr)`);
+    /* or
+    main_div.style.gridTemplateRows = `repeat(${number}, 1fr)`; */
 });
 
 let div_s = document.querySelectorAll(".dividio");
